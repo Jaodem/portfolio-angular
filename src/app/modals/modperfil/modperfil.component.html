@@ -1,0 +1,58 @@
+    <!-- Modal Perfil -->
+    <div class="modal fade" id="perfilModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Perfil</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                    <div class="bg-secondary">
+                        <label for="formFile" class="form-label">Nombre</label>
+                        <input class="form-control" [class.border-danger]="NombreInvalid" type="text" formControlName="nombre" id="formFile">
+                    </div>
+                    <div *ngIf="Nombre?.errors && Nombre?.touched">
+                        <p *ngIf="Nombre?.hasError('required')" class="error">
+                            El nombre es requerido.
+                        </p>
+                    </div>
+
+                    <div class="bg-secondary">
+                        <label for="formFile" class="form-label">Apellido</label>
+                        <input class="form-control" [class.border-danger]="ApellidoInvalid" type="text" formControlName="apellido" id="formFile">
+                    </div>
+                    <div *ngIf="Apellido?.errors && Apellido?.touched">
+                        <p *ngIf="Apellido?.hasError('required')" class="error">
+                            El apellido es requerido.
+                        </p>
+                    </div>
+
+                    <div class="bg-secondary">
+                        <label for="formFile" class="form-label">Profesión</label>
+                        <input class="form-control" [class.border-danger]="ProfesionInvalid" type="text" formControlName="profesion" id="formFile">
+                    </div>
+                    <div *ngIf="Profesion?.errors && Profesion?.touched">
+                        <p *ngIf="Profesion?.hasError('required')" class="error">
+                            La profesión es requerida.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-secondary">
+                        <label for="formFile" class="form-label">Foto de Perfil</label>
+                        <input class="form-control" type="file" [class.border-danger]="FotoInvalid" formControlName="foto" id="formFile">
+                    </div>
+                    <div *ngIf="Foto?.errors && Foto?.touched">
+                        <p *ngIf="Foto?.hasError('required')" class="error">
+                            La imágen de perfil es requerida.
+                        </p>
+                    </div>
+                    
+                    <div class="modal-footer bg-secondary">
+                        <button type="submit" class="btn btn-dark">Guardar</button>
+                    </div>
+                </form>
+                </div>
+
+        </div>
+    </div>

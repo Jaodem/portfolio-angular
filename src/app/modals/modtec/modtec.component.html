@@ -1,0 +1,77 @@
+    <!-- Modal Tecnica -->
+    <div class="modal fade" id="tecnicaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Técnica</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                    <div class="bg-secondary">
+                        <label for="formFile" class="form-label">Título</label>
+                        <input class="form-control" [class.border-danger]="TituloInvalid" formControlName="titulo" type="text" id="formFile">
+                    </div>
+                    <div *ngIf="Titulo?.errors && Titulo?.touched">
+                        <p *ngIf="Titulo?.hasError('required')" class="error">
+                            El título es requerido.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-secondary">
+                        <label for="formFile" class="form-label">Institución</label>
+                        <input class="form-control" [class.border-danger]="InstitucionInvalid" formControlName="institucion" type="text" id="formFile">
+                    </div>
+                    <div *ngIf="Institucion?.errors && Institucion?.touched">
+                        <p *ngIf="Institucion?.hasError('required')" class="error">
+                            La institución es requerida.
+                        </p>
+                    </div>
+        
+                    <div class="bg-secondary">
+                        <label for="formFile" class="form-label">Ciudad</label>
+                        <input class="form-control" [class.border-danger]="CiudadInvalid" formControlName="ciudad" type="text" id="formFile">
+                    </div>
+                    <div *ngIf="Ciudad?.errors && Ciudad?.touched">
+                        <p *ngIf="Ciudad?.hasError('required')" class="error">
+                            La ciudad es requerida.
+                        </p>
+                    </div>
+        
+                    <div class="bg-secondary">
+                        <label for="formFile" class="form-label">Provincia</label>
+                        <input class="form-control" [class.border-danger]="ProvinciaInvalid" formControlName="provincia" type="text" id="formFile">
+                    </div>
+                    <div *ngIf="Provincia?.errors && Provincia?.touched">
+                        <p *ngIf="Provincia?.hasError('required')" class="error">
+                            La provincia es requerida.
+                        </p>
+                    </div>
+        
+                    <div class="bg-secondary">
+                        <label for="formFile" class="form-label">Link</label>
+                        <input class="form-control" [class.border-danger]="LinkInvalid" formControlName="link" type="text" id="formFile">
+                    </div>
+                    <div *ngIf="Link?.errors && Link?.touched">
+                        <p *ngIf="Link?.hasError('required')" class="error">
+                            El link es requerido.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-secondary">
+                        <label for="formFile" class="form-label">Logo de la Institución</label>
+                        <input class="form-control" [class.border-danger]="LogoInvalid" formControlName="logo" type="file" id="formFile">
+                    </div>
+                    <div *ngIf="Logo?.errors && Logo?.touched">
+                        <p *ngIf="Logo?.hasError('required')" class="error">
+                            El logo es requerido.
+                        </p>
+                    </div>
+                    
+                    <div class="modal-footer bg-secondary">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Eliminar</button>
+                        <button type="submit" class="btn btn-dark">Modificar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

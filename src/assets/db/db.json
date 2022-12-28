@@ -1,0 +1,104 @@
+{
+    "nombre" : "José Augusto",
+    "apellido" : "Orellana",
+    "ocupacion" : "Desarrollador Full Stack Jr",
+    "descripcion" : "Gracias por pasar a ver mi portfolio, soy José Augusto Orellana mis amigos me dicen Jao, soy profesor de matemáticas y licenciado en la enseñanza de la matemática, siempre escuchaba relatos, veía noticias al respecto de la programación, nunca supe bien qué era o en qué consistía, un día cansado de golpearme con la realidad de no poder conseguir trabajo de lo que estudié, decidí ver de que se trataba esto de la programación, y es así como llegué a estudiar desarrollador full stack jr, algo que me apasionó y me llevo a horas de estudio y desarrollo, para aprender y sobre todo seguir aprendiendo",
+    "encabezado" : "Acerca de mí",
+    
+
+    "estudios" : [
+        {
+            "id" : 1,
+            "logo" : "assets/img/tecnica1.png",
+            "alt" : "E.T. N°1",
+            "class" : "enet",
+            "titulo" : "Tec. Equipos Electromecánicos",
+            "pagina" : "https://www.facebook.com/EscuelaTecnicaNro1Concepcion/",
+            "institucion" : "Esc. Técnica N°1",
+            "ciudad" : "Concepción",
+            "provincia" : "Tucumán",
+            "modal" : "#tecnicaModal"
+        },
+        {
+            "id" : 2,
+            "logo" : "assets/img/logoIES.png",
+            "alt" : "Ies Concepción",
+            "class" : "ies",
+            "titulo" : "Analista en Sistemas",
+            "pagina" : "https://iesconcepcion.edu.ar/index.php",
+            "institucion" : "Instituto de Enseñanza Superior",
+            "ciudad" : "Concepción",
+            "provincia" : "Tucumán",
+            "modal" : "#iesModal"
+        },
+        {
+            "id" : 3,
+            "logo" : "assets/img/logoIESA01.png",
+            "alt" : "Ies Aguilares",
+            "class" : "iesa",
+            "titulo" : "Profesorado en Matemáticas",
+            "pagina" : "https://iesa-tuc.infd.edu.ar/sitio/",
+            "institucion" : "Instituto de Enseñanza Superior",
+            "ciudad" : "Aguilares",
+            "provincia" : "Tucumán",
+            "modal" : "#iesaModal"
+        },
+        {
+            "id" : 4,
+            "logo" : "assets/img/logounca.png",
+            "alt" : "Unca",
+            "class" : "unca",
+            "titulo" : "Lic. Enseñanza de Matemáticas",
+            "pagina" : "https://www.unca.edu.ar/",
+            "institucion" : "Universidad Nacional de Catamarca",
+            "ciudad" : "San Fernando",
+            "provincia" : "Catamarca",
+            "modal" : "#uncaModal"
+        }
+    ],
+
+    "habilidades" : [
+        {
+            "id" : 1,
+            "name" : "Linux",
+            "icono" : "fa-brands fa-linux fa-2xl",
+            "porcentaje" : "50%",
+            "modal" : "#linuxModal"
+        },
+        {
+            "id" : 2,
+            "name" : "Html",
+            "icono" : "fa-brands fa-html5 fa-2xl",
+            "porcentaje" : "30%",
+            "modal" : "#htmlModal"
+        },
+        {
+            "id" : 3,
+            "name" : "CSS",
+            "icono" : "fa-brands fa-css3-alt fa-2xl",
+            "porcentaje" : "30%",
+            "modal" : "#cssModal"
+        },
+        {
+            "id" : 4,
+            "name" : "JavaScript",
+            "icono" : "fa-brands fa-square-js fa-2xl",
+            "porcentaje" : "25%",
+            "modal" : "#jsModal"
+        },
+        {
+            "id" : 5,
+            "name" : "Bootstrap",
+            "icono" : "fa-brands fa-bootstrap fa-2xl",
+            "porcentaje" : "50%",
+            "modal" : "#bootstrapModal"
+        },
+        {
+            "id" : 6,
+            "name" : "Angular",
+            "icono" : "fa-brands fa-angular fa-2xl",
+            "porcentaje" : "15%",
+            "modal" : "#angularModal"
+        }
+    ]
+}

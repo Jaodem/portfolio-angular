@@ -1,0 +1,10 @@
+nav ul li {
+    float: left;
+    list-style: none;
+    text-align: end !important;
+    margin: 2rem;
+}
+.navbar.navbar-expand-lg {
+    margin: 1%;
+    border: solid #000000;
+}

@@ -1,0 +1,23 @@
+<div class="modal fade" id="imagenUnoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-secondary">
+                <h5 class="modal-title" id="exampleModalLabel">Cambiar Imágen</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                <div class="mb-3 mt-3">
+                    <input class="form-control" [class.border-danger]="FotoInvalid" formControlName="foto" type="file" id="formFile">
+                </div>
+                <div *ngIf="Foto?.errors && Foto?.touched">
+                    <p *ngIf="Foto?.hasError('required')" class="error">
+                        La imágen es requerida.
+                    </p>
+                </div>
+                <div class="modal-footer bg-secondary">
+                    <button type="submit" class="btn btn-dark">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

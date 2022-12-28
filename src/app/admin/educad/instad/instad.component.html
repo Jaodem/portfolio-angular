@@ -1,0 +1,13 @@
+<tbody>
+    <tr>
+        <td class="col-3" *ngFor="let estudio of estudios">
+            <i class="">
+                <a [href]="estudio.pagina" target="_blank"><img [src]="estudio.logo" [alt]="estudio.alt" width="75%" [class]="estudio.class"></a> <br> <br>
+                <h6>{{estudio.titulo}}</h6>
+                <h6>{{estudio.institucion}}</h6>
+                <h6>{{estudio.ciudad}} - {{estudio.provincia}}</h6>
+            </i>
+            <i class="fa-solid fa-pen" id="editar" type="button" data-bs-toggle="modal" [attr.data-bs-target]="estudio.modal"></i>
+        </td>
+    </tr>
+</tbody>

@@ -1,0 +1,10 @@
+i.fa-solid.fa-pen:hover {
+    color: rgba(255, 255, 255, 0.3);
+}
+i.fa-solid.fa-pen {
+    color: #fff;
+}
+section.banner {
+    margin: 1%;
+    border: solid black;
+}

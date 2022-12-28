@@ -1,0 +1,18 @@
+/* Configuración de la foto de perfil */
+.rounded-circle.w-25 {
+    position:absolute;
+    z-index:1;
+    width: 15% !important;
+    height: auto;
+    margin-top: -8%;
+    margin-left: -3% !important;
+    border: solid black;
+}
+
+/* Lestras debajo foto de perfil */
+h6.text-center {
+    margin-left: -50% !important;
+}
+i.fa-solid.fa-pen:hover {
+    color: rgba(255, 255, 255, 0.3);
+}

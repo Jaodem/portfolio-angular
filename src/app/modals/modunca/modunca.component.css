@@ -1,0 +1,17 @@
+.modal-title,
+.col-sm-2.col-form-label {
+    color: #fff;
+}
+.form-control {
+    background-color: #C5C5C5;
+}
+.form-label {
+    color: #fff;
+}
+.error{
+    color:rgb(144, 3, 3);
+  }
+  
+.border-danger{
+  border-color: red;
+}

@@ -1,0 +1,29 @@
+nav ul li {
+    float: left;
+    list-style: none;
+    text-align: end !important;
+    margin: 2rem;
+}
+i.fa-solid.fa-user-lock,
+i.fa-brands.fa-facebook,
+i.fa-brands.fa-linkedin-in,
+i.fa-brands.fa-instagram,
+i.fa-solid.fa-user,
+i.fa-sharp.fa-solid.fa-square-pen {
+    color: #fff;
+    width: 50% !important;
+    height: 50% !important;
+}
+i.fa-solid.fa-user-lock:hover,
+i.fa-solid.fa-user:hover {
+    color: #D41F50;
+}
+i.fa-brands.fa-facebook:hover {
+    color: #0277FC;
+}
+i.fa-brands.fa-linkedin-in:hover {
+    color: #2468B3;
+}
+i.fa-brands.fa-instagram:hover {
+    color: #D41F50;
+}

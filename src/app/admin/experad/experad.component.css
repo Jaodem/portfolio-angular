@@ -1,0 +1,9 @@
+section.experiencia {
+    background-image:url(src\assets\img\imagen2.jpg);
+    background-size: 100%;
+    margin: 1%;
+    border: solid black;    
+}
+i.fa-solid.fa-plus:hover {
+    color: rgba(255, 255, 255, 0.3);
+}

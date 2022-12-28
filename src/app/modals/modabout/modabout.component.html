@@ -1,0 +1,36 @@
+    <!-- Modal Acerca De Mí -->
+    <div class="modal fade" id="acercaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Acerca de Mí</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                    <div class="bg-secondary">
+                        <label for="formFile" class="form-label">Encabezado</label>
+                        <input class="form-control" [class.border-danger]="EncabezadoInvalid" formControlName="encabezado" type="text" id="formFile">
+                    </div>
+                    <div *ngIf="Encabezado?.errors && Encabezado?.touched">
+                        <p *ngIf="Encabezado?.hasError('required')" class="error">
+                            El encabezado es requerido.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-secondary">
+                        <label for="formFile" class="form-label">Texto</label>
+                        <input class="form-control" [class.border-danger]="TextoInvalid" formControlName="texto" type="text" id="formFile">
+                    </div>
+                    <div *ngIf="Texto?.errors && Texto?.touched">
+                        <p *ngIf="Texto?.hasError('required')" class="error">
+                            La descripción es requerida.
+                        </p>
+                    </div>
+                    
+                    <div class="modal-footer bg-secondary">
+                        <button type="submit" class="btn btn-dark">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

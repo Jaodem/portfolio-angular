@@ -1,0 +1,11 @@
+.modal-title,
+.col-sm-2.col-form-label {
+    color: #fff;
+}
+.error{
+    color:rgb(144, 3, 3);
+  }
+  
+.border-danger{
+  border-color: red;
+}

@@ -1,0 +1,45 @@
+<div class="modal fade" id="skillsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-secondary">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Skill</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Skill</label>
+                    <input class="form-control" [class.border-danger]="NameInvalid" formControlName="name" type="text" id="formFile">
+                </div>
+                <div *ngIf="Name?.errors && Name?.touched">
+                    <p *ngIf="Name?.hasError('required')" class="error">
+                        El skill es requerido.
+                    </p>
+                </div>
+                
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Porcentaje</label>
+                    <input class="form-control" [class.border-danger]="PorcentajeInvalid" formControlName="porcentaje" type="text" id="formFile">
+                </div>
+                <div *ngIf="Porcentaje?.errors && Porcentaje?.touched">
+                    <p *ngIf="Porcentaje?.hasError('required')" class="error">
+                        El porcentaje es requerido.
+                    </p>
+                </div>
+                
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Logo de Skill</label>
+                    <input class="form-control" [class.border-danger]="IconoInvalid" formControlName="icono" type="text" id="formFile">
+                </div>
+                <div *ngIf="Icono?.errors && Icono?.touched">
+                    <p *ngIf="Icono?.hasError('required')" class="error">
+                        El icono es requerido.
+                    </p>
+                </div>
+                
+                <div class="modal-footer bg-secondary">
+                    <button type="submit" class="btn btn-dark">Agregar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

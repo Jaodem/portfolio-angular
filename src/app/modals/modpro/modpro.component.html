@@ -1,0 +1,35 @@
+<div class="modal fade" id="proyectosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-secondary">
+                <h5 class="modal-title" id="exampleModalLabel">Proyectos</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Proyecto</label>
+                    <input class="form-control" [class.border-danger]="ProyectoInvalid" formControlName="proyecto" type="text" id="formFile">
+                </div>
+                <div *ngIf="Proyecto?.errors && Proyecto?.touched">
+                    <p *ngIf="Proyecto?.hasError('required')" class="error">
+                        El proyecto es requerido.
+                    </p>
+                </div>
+                
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Logo del Proyecto</label>
+                    <input class="form-control" [class.border-danger]="LogoInvalid" formControlName="logo" type="file" id="formFile">
+                </div>
+                <div *ngIf="Logo?.errors && Logo?.touched">
+                    <p *ngIf="Logo?.hasError('required')" class="error">
+                        El logo del proyecto es requerido.
+                    </p>
+                </div>
+                
+                <div class="modal-footer bg-secondary">
+                    <button type="submit" class="btn btn-dark">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
