@@ -49,7 +49,7 @@
         
                     <div class="bg-secondary">
                         <label for="formFile" class="form-label">Link</label>
-                        <input class="form-control" [class.border-danger]="LinkInvalid" formControlName="link" type="text" id="formFile">
+                        <input class="form-control" [class.border-danger]="LinkInvalid" formControlName="link" type="url" id="formFile">
                     </div>
                     <div *ngIf="Link?.errors && Link?.touched">
                         <p *ngIf="Link?.hasError('required')" class="error">

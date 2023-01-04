@@ -12,28 +12,64 @@ export class ModexpComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
-      experiencia:['', Validators.required],
-      referencia:['', Validators.required],
+      cargo:['', Validators.required],
+      empresa:['', Validators.required],
+      inicio:['', Validators.required],
+      fin:['', Validators.required],
+      descripcion:['', Validators.required],
+      logo:['', Validators.required],
     })
   }
 
   ngOnInit() {
   }
 
-  get Experiencia() {
-    return this.form.get("experiencia");
+  get Cargo() {
+    return this.form.get("cargo");
   }
 
-  get Referencia() {
-    return this.form.get("referencia");
+  get Empresa() {
+    return this.form.get("empresa");
   }
 
-  get ExperienciaInvalid() {
-    return this.Experiencia?.touched && !this.Experiencia?.valid;
+  get Inicio() {
+    return this.form.get("inicio");
   }
 
-  get ReferenciaInvalid() {
-    return this.Referencia?.touched && !this.Referencia?.valid;
+  get Fin() {
+    return this.form.get("fin");
+  }
+
+  get Descripcion() {
+    return this.form.get("descripcion");
+  }
+
+  get Logo() {
+    return this.form.get("logo");
+  }
+
+  get CargoInvalid() {
+    return this.Cargo?.touched && !this.Cargo?.valid;
+  }
+
+  get EmpresaInvalid() {
+    return this.Empresa?.touched && !this.Empresa?.valid;
+  }
+
+  get InicioInvalid() {
+    return this.Inicio?.touched && !this.Inicio?.valid;
+  }
+
+  get FinInvalid() {
+    return this.Fin?.touched && !this.Fin?.valid;
+  }
+
+  get DescripcionInvalid() {
+    return this.Descripcion?.touched && !this.Descripcion?.valid;
+  }
+
+  get LogoInvalid() {
+    return this.Logo?.touched && !this.Logo?.valid;
   }
 
   onEnviar(event: Event) {

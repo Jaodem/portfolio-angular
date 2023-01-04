@@ -18,7 +18,7 @@
                 
                 <div class="bg-secondary">
                     <label for="formFile" class="form-label">Porcentaje</label>
-                    <input class="form-control" [class.border-danger]="PorcentajeInvalid" formControlName="porcentaje" type="text" id="formFile">
+                    <input class="form-control" [class.border-danger]="PorcentajeInvalid" formControlName="porcentaje" type="number" min="0" max="100" id="formFile">
                 </div>
                 <div *ngIf="Porcentaje?.errors && Porcentaje?.touched">
                     <p *ngIf="Porcentaje?.hasError('required')" class="error">

@@ -15,6 +15,46 @@
                         El proyecto es requerido.
                     </p>
                 </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Inicio</label>
+                    <input class="form-control" [class.border-danger]="InicioInvalid" formControlName="inicio" type="text" id="formFile">
+                </div>
+                <div *ngIf="Inicio?.errors && Inicio?.touched">
+                    <p *ngIf="Inicio?.hasError('required')" class="error">
+                        La fecha de inicio es requerida.
+                    </p>
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Fin</label>
+                    <input class="form-control" [class.border-danger]="FinInvalid" formControlName="fin" type="text" id="formFile">
+                </div>
+                <div *ngIf="Fin?.errors && Fin?.touched">
+                    <p *ngIf="Fin?.hasError('required')" class="error">
+                        La fecha de finalización o continuidad es requerida.
+                    </p>
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Descripción</label>
+                    <input class="form-control" [class.border-danger]="DescripcionInvalid" formControlName="descripcion" type="text" id="formFile">
+                </div>
+                <div *ngIf="Descripcion?.errors && Descripcion?.touched">
+                    <p *ngIf="Descripcion?.hasError('required')" class="error">
+                        La descripción es requerida.
+                    </p>
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Link</label>
+                    <input class="form-control" [class.border-danger]="LinkInvalid" formControlName="link" type="url" id="formFile">
+                </div>
+                <div *ngIf="Link?.errors && Link?.touched">
+                    <p *ngIf="Link?.hasError('required')" class="error">
+                        El link es requerida.
+                    </p>
+                </div>
                 
                 <div class="bg-secondary">
                     <label for="formFile" class="form-label">Logo del Proyecto</label>

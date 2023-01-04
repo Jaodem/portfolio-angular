@@ -7,22 +7,62 @@
             </div>
             <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <div class="bg-secondary">
-                <label for="formFile" class="form-label">Experiencia</label>
-                <input class="form-control" [class.border-danger]="ExperienciaInvalid" formControlName="experiencia" type="text" id="formFile">
+                <label for="formFile" class="form-label">Cargo</label>
+                <input class="form-control" [class.border-danger]="CargoInvalid" formControlName="cargo" type="text" id="formFile">
             </div>
-            <div *ngIf="Experiencia?.errors && Experiencia?.touched">
-                <p *ngIf="Experiencia?.hasError('required')" class="error">
-                    La experiencia es requerida.
+            <div *ngIf="Cargo?.errors && Cargo?.touched">
+                <p *ngIf="Cargo?.hasError('required')" class="error">
+                    El cargo es requerida.
                 </p>
             </div>
 
             <div class="bg-secondary">
-                <label for="formFile" class="form-label">Referencia</label>
-                <input class="form-control" [class.border-danger]="ReferenciaInvalid" formControlName="referencia" type="file" id="formFile">
+                <label for="formFile" class="form-label">Empresa</label>
+                <input class="form-control" [class.border-danger]="EmpresaInvalid" formControlName="empresa" type="text" id="formFile">
             </div>
-            <div *ngIf="Referencia?.errors && Referencia?.touched">
-                <p *ngIf="Referencia?.hasError('required')" class="error">
-                    La referencia es requerida.
+            <div *ngIf="Empresa?.errors && Empresa?.touched">
+                <p *ngIf="Empresa?.hasError('required')" class="error">
+                    El nombre de la empresa o institución es requerido.
+                </p>
+            </div>
+
+            <div class="bg-secondary">
+                <label for="formFile" class="form-label">Inicio</label>
+                <input class="form-control" [class.border-danger]="InicioInvalid" formControlName="inicio" type="text" id="formFile">
+            </div>
+            <div *ngIf="Inicio?.errors && Inicio?.touched">
+                <p *ngIf="Inicio?.hasError('required')" class="error">
+                    La fecha de inicio es requerida.
+                </p>
+            </div>
+
+            <div class="bg-secondary">
+                <label for="formFile" class="form-label">Fin</label>
+                <input class="form-control" [class.border-danger]="FinInvalid" formControlName="fin" type="text" id="formFile">
+            </div>
+            <div *ngIf="Fin?.errors && Fin?.touched">
+                <p *ngIf="Fin?.hasError('required')" class="error">
+                    La fecha de finalización o continuidad requerida.
+                </p>
+            </div>
+
+            <div class="bg-secondary">
+                <label for="formFile" class="form-label">Descripción</label>
+                <input class="form-control" [class.border-danger]="DescripcionInvalid" formControlName="descripcion" type="text" id="formFile">
+            </div>
+            <div *ngIf="Descripcion?.errors && Descripcion?.touched">
+                <p *ngIf="Descripcion?.hasError('required')" class="error">
+                    La descripción es requerida.
+                </p>
+            </div>
+
+            <div class="bg-secondary">
+                <label for="formFile" class="form-label">Logo</label>
+                <input class="form-control" [class.border-danger]="LogoInvalid" formControlName="logo" type="file" id="formFile">
+            </div>
+            <div *ngIf="Logo?.errors && Logo?.touched">
+                <p *ngIf="Logo?.hasError('required')" class="error">
+                    El logo es requerida.
                 </p>
             </div>
 
